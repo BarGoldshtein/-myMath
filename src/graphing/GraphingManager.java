@@ -107,9 +107,17 @@ public class GraphingManager{
             double current_x = xValue(i, xmin, xmax);
             double current_y = poly.f(current_x);
             g.drawLine(i - 1, yIndex(previous_y, ymin, ymax), i, yIndex(current_y, ymin, ymax));
+            if(poly.maxMinPoint(current_x)) {
+                g.setColor(Color.BLUE);
+            	g.drawOval(i-8, yIndex(current_y, ymin, ymax)-8, 20, 20);
+            	g.drawOval(i-8, yIndex(current_y, ymin, ymax)-8, 21, 21);
+            	g.drawOval(i-8, yIndex(current_y, ymin, ymax)-8, 22, 22);  
+                g.setColor(Color.RED);
+            }
             previous_x = current_x;
             previous_y = current_y;
         }
+        g.setColor(Color.BLUE);
         // labels the function at the top of the screen
         g.drawString(poly.toString(), 10, 50);
         return buffimg;

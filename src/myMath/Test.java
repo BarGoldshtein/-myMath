@@ -1,6 +1,6 @@
 package myMath;
 
-import graphing.TemporaryWindow;
+import graphing.*; 
 
 public class Test {
 
@@ -8,7 +8,7 @@ public class Test {
 
 		/*
 		 * String pol1="-3.0x^3-6";
-		 */ String pol2 = "13.4x^4+2.0x^4-3.0x^2+1.0x+1.0";
+		 */ String pol2 = "0.2x^4-1.5x^3+3x^2-1x-5";
 		/*
 		 * Polynom pol1p=new Polynom (pol1);
 		 */ Polynom pol2p = new Polynom(pol2);
@@ -32,5 +32,10 @@ public class Test {
 		System.out.println(t);
 		TemporaryWindow graph= new TemporaryWindow();
 		graph.display(pol2p, -10, 10, -10, 20);
+/*		
+
+        LinePlotTest frame = new LinePlotTest(pol2p);
+        frame.setVisible(true);*/
+    
 	}
 }

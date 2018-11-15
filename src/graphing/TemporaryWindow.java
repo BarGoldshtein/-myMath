@@ -1,4 +1,7 @@
 package graphing;
+/**
+ *@author https://github.com/kevintpeng/Polynomial-Graphing-Calculator
+ */
 
 import myMath.Polynom;
 
@@ -26,6 +29,7 @@ public class TemporaryWindow extends JFrame{
         this.img = graphingManager.plotFunction(poly, xmin,xmax,ymin,ymax);
         this.setVisible(true);
         this.repaint();
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 
     }
     
@@ -33,7 +37,7 @@ public class TemporaryWindow extends JFrame{
         this.setUndecorated(true);
         this.setSize(1000, 600);
         this.setAlwaysOnTop(true);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
     }
     public void close(){
         this.dispose();
