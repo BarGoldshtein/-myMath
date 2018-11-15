@@ -11,8 +11,7 @@ import java.util.Iterator;
  * between two values (currently support root only f(x)=0). 3. Derivative
  * 
  * @author Boaz
- * @param Mtp:
- *            Monom to Polynom an Array list that will hold all the Monoms and
+ * @param Mtp:Monom to Polynom an Array list that will hold all the Monoms and
  *            will "Make" an Polynom
  */
 public class Polynom implements Polynom_able {
@@ -32,30 +31,20 @@ public class Polynom implements Polynom_able {
 	 * An function that get an String and convert it to an Object type Polynom. the
 	 * function will check if the string is legal and use only legal one.
 	 * 
-	 * @param flag:will
-	 *            let us know if after we check if any char at String "good" is not
+	 * @param flag:will let us know if after we check if any char at String "good" is not
 	 *            acceptable we break the check (then in the if count will not be at
 	 *            size of "Poly").
-	 * @param Poly:
-	 *            the String that we get into the function.
-	 * @param good:
-	 *            is an String with all the acceptable chars for a Polynom(its will
+	 * @param Poly:the String that we get into the function.
+	 * @param good: is an String with all the acceptable chars for a Polynom(its will
 	 *            help us test if "poly" is an a "good" String.
-	 * @param count
-	 *            : will count every good Char we get in the String "Poly".
-	 * @param PolySplit:
-	 *            a array of the String "Poly" that all of them are split of the
-	 *            string by "+".
-	 * @param PolySplitMin:
-	 *            a array of the String PolySplit Strings that all of them are split
-	 *            of the string by "-".
-	 * @param cof:represent
-	 *            the coefficient of "x".
-	 * @param pow:represent
-	 *            the power of "x".
-	 * @param temp:tempory
-	 *            Monom that we will add to the new Polynom.
-	 * 
+	 * @param count: will count every good Char we get in the String "Poly".
+	 * @param PolySplit:a array of the String "Poly" that all of them are split of the
+	 *            		string by "+".
+	 * @param PolySplitMin: a array of the String PolySplit Strings that all of them are split
+	 *            			of the string by "-".
+	 * @param cof:represent the coefficient of "x".
+	 * @param pow:represent the power of "x".
+	 * @param temp:tempory Monom that we will add to the new Polynom.
 	 */
 	public Polynom(String Poly) {
 		if (Poly.length() == 0) {
@@ -131,10 +120,8 @@ public class Polynom implements Polynom_able {
 	/**
 	 * This function getting an "x" and give back "y".
 	 * 
-	 * @param x:
-	 *            with this double we will get the value of "y".
-	 * @param ans:
-	 *            will represent the "y" of the "x" we got.
+	 * @param x: with this double we will get the value of "y".
+	 * @param ans: will represent the "y" of the "x" we got.
 	 * @return the function returning the value of "y".
 	 */
 	@Override
@@ -149,12 +136,9 @@ public class Polynom implements Polynom_able {
 	/**
 	 * This function getting an Polynom and adding it to a Polynom.
 	 * 
-	 * @param p1:
-	 *            an Polynom that i get for adding it to and existent Polynom.
-	 * @param itr:
-	 *            iterator we a use to move over the Polynom "p1".
-	 * @param temp:will
-	 *            help to hold the Monoms from "p1".
+	 * @param p1: an Polynom that i get for adding it to and existent Polynom.
+	 * @param itr: iterator we a use to move over the Polynom "p1".
+	 * @param temp:will help to hold the Monoms from "p1".
 	 * 
 	 */
 	@Override
@@ -171,8 +155,7 @@ public class Polynom implements Polynom_able {
 	/**
 	 * This function getting an Monom and add it to an Polynom.
 	 * 
-	 * @param m1:an
-	 *            Monom that we got for adding it to an Polynom.
+	 * @param m1:an Monom that we got for adding it to an Polynom.
 	 */
 	@Override
 	public void add(Monom m1) {
@@ -189,15 +172,11 @@ public class Polynom implements Polynom_able {
 	 * this function will get an Polynom and subtract it from the Polynom that
 	 * called the function
 	 * 
-	 * @param itr:the
-	 *            iterator(pointer) that move over the the Polynom.
-	 * @param negativer:
-	 *            an Monom that is (-1) for multiply the Monoms of p1 so when we add
-	 *            it to the original Polymon its will substract from it.
-	 * @param temp:
-	 *            this Monom will hold the data that the pointer point on.
-	 * @param m:
-	 *            deep copy of the data that Monom temp holds
+	 * @param itr:the iterator(pointer) that move over the the Polynom.
+	 * @param negativer: an Monom that is (-1) for multiply the Monoms of p1 so when we add
+	 *           		 it to the original Polymon its will substract from it.
+	 * @param temp: this Monom will hold the data that the pointer point on.
+	 * @param m: deep copy of the data that Monom temp holds
 	 */
 	@Override
 	public void substract(Polynom_able p1) {
@@ -216,17 +195,12 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function getting an Polynom and multiply it with another Polynom.
 	 * 
-	 * @param p1:
-	 *            is the Polynom that we need to multiply the original Polynom with.
-	 * @param itr:the
-	 *            iterator(pointer) that move over the the Polynom.
-	 * @param tempPoly:
-	 *            will hold the result of the multiply.
-	 * @param tempPoly2:will
-	 *            be deep copy of the original Polynom and we will use it to
-	 *            multiply with "p1".
-	 * @param m:
-	 *            Monom that will hold the data the pointer point on.
+	 * @param p1: is the Polynom that we need to multiply the original Polynom with.
+	 * @param itr:the iterator(pointer) that move over the the Polynom.
+	 * @param tempPoly: will hold the result of the multiply.
+	 * @param tempPoly2:will be deep copy of the original Polynom and we will use it to
+	 *         			multiply with "p1".
+	 * @param m: Monom that will hold the data the pointer point on.
 	 */
 	@Override
 	public void multiply(Polynom_able p1) {
@@ -245,18 +219,13 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function will check if two Polynoms are the same one.
 	 * 
-	 * @param p1:the
-	 *            Polynom that we need to check with.
-	 * @param itr:
-	 *            the iterator(pointer) that move over the the Polynom.
-	 * @param flag:
-	 *            will be true if all the Monoms of the Polynoms are the same, else
-	 *            will be false
-	 * @param count:will
-	 *            count the how much Monoms there is in p1 . if count==the original
-	 *            Polynom size that means that they are both at the same size.
-	 * @param temp:
-	 *            will hold the data that the pointer point on.
+	 * @param p1:the  Polynom that we need to check with.
+	 * @param itr: the iterator(pointer) that move over the the Polynom.
+	 * @param flag: will be true if all the Monoms of the Polynoms are the same, else
+	 *           	will be false
+	 * @param count: will count the how much Monoms there is in p1 . if count==the original
+	 *             	 Polynom size that means that they are both at the same size.
+	 * @param temp: will hold the data that the pointer point on.
 	 * @return true if the Polynoms are the same else false
 	 * 
 	 */
@@ -309,53 +278,59 @@ public class Polynom implements Polynom_able {
 	 * this function will get x0,x1 and an epsilon will give us the root of the
 	 * Polynom between them at an offset of epsilon.
 	 * 
-	 * @param x0:
-	 *            the first x we get in the function.
-	 * @param x1:the
-	 *            second x we get in the function.
-	 * @param eps:the
-	 *            offset we need to work by.
-	 * @param mid:represent
-	 *            the value of the mid point between x0,x1.
-	 * @param temp:
-	 *            help us to set x0 as bigger then x1.
+	 * @param x0: the first x we get in the function.
+	 * @param x1:the second x we get in the function.
+	 * @param eps:the offset we need to work by.
+	 * @param mid:represent the value of the mid point between x0,x1.
+	 * @param temp: help us to set x0 as bigger then x1.
 	 * @return mid which represent the value of the mid point between x0,x1.
 	 */
 
 	@Override
 	public double root(double x0, double x1, double eps) {
 		double mid = 0;
-		if (f(x0) * f(x1) <= 0) {
-			if (x1 > x0) {
-				double temp = x1;
-				x1 = x0;
-				x0 = temp;
-			}
-			if (x1 == x0) {
-				return x0;
-			}
-			if (this.Mtp.get(0).get_coefficient() > 0) {
-				mid = (x1 + x0) / 2;
-				if (Math.abs(this.f(mid)) > eps) {
-					if (f(mid) > 0) {
-						return this.root(x0+eps, x1, eps);
-					} else if (this.f(mid) < 0) {
-						return this.root(x0, x1-eps, eps);
-					} else {
-						return mid;
+
+		try {
+			if(this.isZero()) {
+				throw new Exception("you can't find root in zero polynom");
+			}else if(eps<=0) {
+				throw new Exception("epsilon sholed be a positive number");
+			} else {
+				if (f(x0) * f(x1) <= 0) {
+					if (x1 > x0) {
+						double temp = x1;
+						x1 = x0;
+						x0 = temp;
+					}
+					if (x1 == x0) {
+						return x0;
+					}
+					if (this.Mtp.get(0).get_coefficient() > 0) {
+						mid = (x1 + x0) / 2;
+						if (Math.abs(this.f(mid)) > eps) {
+							if (f(mid) > 0) {
+								return this.root(x0+eps, x1, eps);
+							} else if (this.f(mid) < 0) {
+								return this.root(x0, x1-eps, eps);
+							} else {
+								return mid;
+							}
+						}
+					}
+					if (this.Mtp.get(0).get_coefficient() < 0) {
+						mid = (x1 + x0) / 2;
+						if (Math.abs(this.f(mid)) > eps) {
+							if (f(mid) > 0) {
+								return this.root(x0, x1-eps, eps);
+							} else if (this.f(mid) < 0) {
+								return this.root(x0+eps, x1, eps);
+							}
+						}
 					}
 				}
 			}
-			if (this.Mtp.get(0).get_coefficient() < 0) {
-				mid = (x1 + x0) / 2;
-				if (Math.abs(this.f(mid)) > eps) {
-					if (f(mid) > 0) {
-						return this.root(x0, x1-eps, eps);
-					} else if (this.f(mid) < 0) {
-						return this.root(x0+eps, x1, eps);
-					}
-				}
-			}
+		} catch (Exception e) {
+			System.err.println(e);
 		}
 		return mid;
 	}
@@ -363,10 +338,8 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function will perform a deep copy of Polynom.
 	 * 
-	 * @param temp:
-	 *            an Polynom that will represent our new Monom from the copy .
-	 * @param tempMonom:
-	 *            will be a new Monom that we will add to our new Polynom again its
+	 * @param temp: an Polynom that will represent our new Monom from the copy .
+	 * @param tempMonom: will be a new Monom that we will add to our new Polynom again its
 	 *            will be deep copy of the original Monom.
 	 * @return the new Polynom after we add to it all the deep copy Monoms of the
 	 *         original one
@@ -390,14 +363,11 @@ public class Polynom implements Polynom_able {
 	 * this function will take the Polynom and create an new Polynom and fill it
 	 * with the derivative of the original one.
 	 * 
-	 * @param itr:
-	 *            iterator we a use to move over the our Polynom(the one who called
+	 * @param itr: iterator we a use to move over the our Polynom(the one who called
 	 *            the function).
-	 * @param Poly:
-	 *            the new Polynom that will hold the Original Polynom after we
+	 * @param Poly:the new Polynom that will hold the Original Polynom after we
 	 *            derivative it.
-	 * @param temp:
-	 *            a new Monom that will hold the data that we got from what the
+	 * @param temp: a new Monom that will hold the data that we got from what the
 	 *            pointer is pointing on(the iterator).
 	 * @return we return the new Polynom after we create it according to the
 	 *         derivative of the original one.
@@ -421,22 +391,14 @@ public class Polynom implements Polynom_able {
 	 * this function will get x0,x1,eps the function will calculate the area between
 	 * x0 to x1 using squares that each square is at the size of eps.
 	 * 
-	 * @param x0:the
-	 *            first x (we used it as x of a point).
-	 * @param x1:the
-	 *            second x (same as the first one we used it as x of a point).
-	 * @param eps:
-	 *            the size of the squares (only width not the height).
-	 * @param sumOfArea:
-	 *            will hold the size of area between x0 to x1.
-	 * @param numOfSquares:
-	 *            an int that will hold how much squares we have.
-	 * @param temp:will
-	 *            hold the minimum between x0,x1.
-	 * @param yTemp:
-	 *            will be the y of any given x(point)
-	 * @param Area:
-	 *            the area of any given square according to its high and width.
+	 * @param x0:the first x (we used it as x of a point).
+	 * @param x1:thesecond x (same as the first one we used it as x of a point).
+	 * @param eps: the size of the squares (only width not the height).
+	 * @param sumOfArea: will hold the size of area between x0 to x1.
+	 * @param numOfSquares: an int that will hold how much squares we have.
+	 * @param temp:will hold the minimum between x0,x1.
+	 * @param yTemp: will be the y of any given x(point)
+	 * @param Area: the area of any given square according to its high and width.
 	 * @return sumOfArea if x0!=x1 because if its is the area between them is 0.
 	 */
 
@@ -482,8 +444,7 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function will take the Polynom and export it into String.
 	 * 
-	 * @param Poly:
-	 *            an empty String that we fill in with the Monoms from the Polynom.
+	 * @param Poly: an empty String that we fill in with the Monoms from the Polynom.
 	 * @return the String Poly if the Polynom is not empty else returning String
 	 *         "0.0".
 	 */
@@ -513,6 +474,7 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function will create an pointer that will help us move over an Array of
 	 * Monoms will be called (Polynom).
+	 * 
 	 * @param itr:the pointer to move the Array.
 	 * @return the pointer.
 	 */
@@ -523,19 +485,22 @@ public class Polynom implements Polynom_able {
 
 		return itr;
 	}
+
 	/**
 	 * this function will get an x and determinate if its max or min point
-	 * @param x: an x of an point the function get.
-	 * @param flag: an boolean that will let us know at the end of the function if the point is max or min one.
+	 * 
+	 * @param x:an x of an point the function get.
+	 * @param flag: an boolean that will let us know at the end of the function if the
+	 *            point is max or min one.
 	 * @param temp:will hold the derivative Polynom.
 	 * @return the flag if its max or min the flag will be true else will be false.
 	 */
-	public boolean maxMinPoint( double x) {
+	public boolean maxMinPoint(double x) {
 		boolean flag = false;
 		Polynom temp = new Polynom();
 		temp = (Polynom) this.derivative();
 		if (!temp.isZero()) {
-			if (temp.f(x)>-0.1 && temp.f(x)<0.1) {
+			if (temp.f(x) > -0.1 && temp.f(x) < 0.1) {
 				flag = true;
 			}
 		}
@@ -546,12 +511,9 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function get an Monom and multiply it with the Polynom
 	 * 
-	 * @param m1:the
-	 *            Monom we get for the multiply
-	 * @param itr:will
-	 *            be the iterator for moving on mtp(MonomtoPolynom) Array list .
-	 * @param temp:an
-	 *            Monom that will hold the data which the pointer(iterator) point on
+	 * @param m1:the Monom we get for the multiply
+	 * @param itr:will be the iterator for moving on mtp(MonomtoPolynom) Array list .
+	 * @param temp:an Monom that will hold the data which the pointer(iterator) point on
 	 */
 
 	private void multiply(Monom m1) {
@@ -584,15 +546,11 @@ public class Polynom implements Polynom_able {
 	/**
 	 * this function will erase any empty spaces in the String.
 	 * 
-	 * @param str:the
-	 *            String put in the function for the cleaning.
-	 * @param counter:count
-	 *            the non-empty spaces.
-	 * @param strNoSpaces:a
-	 *            String in the size of "counter" its will host the new String we
+	 * @param str:the String put in the function for the cleaning.
+	 * @param counter:count the non-empty spaces.
+	 * @param strNoSpaces:a String in the size of "counter" its will host the new String we
 	 *            will give back.
-	 * @param index:
-	 *            will help us check when we got to the size of "strNoSpaces".
+	 * @param index: will help us check when we got to the size of "strNoSpaces".
 	 * @return the new String we build "strNoSpaces" that is a String with no empty
 	 *         spaces.
 	 * 

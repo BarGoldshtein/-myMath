@@ -1,4 +1,7 @@
 package graphing;
+/**
+ *@author https://github.com/kevintpeng/Polynomial-Graphing-Calculator
+ */
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
